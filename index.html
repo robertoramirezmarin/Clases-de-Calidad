@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de Calidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #1a103c;
+            background-image:
+                radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.4) 0%, transparent 40%);
+            overflow-x: hidden;
+            color: #e0e0e0;
+        }
+
+        .card {
+            background-color: rgba(40, 27, 85, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(124, 58, 237, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 30px rgba(124, 58, 237, 0.2);
+        }
+
+        .icon {
+            width: 48px;
+            height: 48px;
+            stroke-width: 1.5;
+        }
+        
+        .header-glow {
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 0 20px rgba(124, 58, 237, 0.6);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-6 md:p-8">
+    <div class="container mx-auto max-w-6xl">
+
+        <!-- Header Section -->
+        <header class="text-center my-12">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white header-glow">
+                🚀 Guía para Clases de Calidad 🚀
+            </h1>
+            <p class="text-lg md:text-xl mt-4 text-purple-300 max-w-3xl mx-auto">
+                Sapienty Math Academy
+            </p>
+        </header>
+
+        <main>
+            <!-- Mission Structure Section -->
+            <section id="structure" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8 text-white header-glow">Estructura de la Clase</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1: Despegue -->
+                    <div class="card rounded-2xl p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">✨ Inicio</h3>
+                        <ul class="text-left space-y-2 text-purple-200">
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">👋 </span> Saludo corto y cordial (interesarse por cómo le fue).</li>
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">🤝 </span> Ofrecer apoyo para resolver dudas de la escuela (preguntar qué tema está viendo en la escuela).</li>
+                        </ul>
+                    </div>
+                    <!-- Card 2: Exploración -->
+                    <div class="card rounded-2xl p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L3 10.25l6.75-6.75M19.5 17l-6.75-6.75L19.5 3.5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">📖 Desarrollo</h3>
+                        <ul class="text-left space-y-2 text-purple-200">
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">⏰</span> Puntualidad</li>
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">🧑🏻‍🎓</span> Explicación Dirigida</li>
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">✍️</span> Resolución Interactiva</li>
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">💬</span> Fomento del Pensamiento Crítico</li>
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">📚</span> Material de Apoyo</li>
+                        </ul>
+                    </div>
+                    <!-- Card 3: Aterrizaje -->
+                    <div class="card rounded-2xl p-6 text-center">
+                        <div class="flex justify-center mb-4">
+                             <svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125V6.375c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v.001c0 .621.504 1.125 1.125 1.125z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">✅ Cierre</h3>
+                        <ul class="text-left space-y-2 text-purple-200">
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">🔄</span>Síntesis rápida del tema (qué aprendimos hoy).</li>
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">📋</span> Pedir al alumno que explique con sus propias palabras.</li>
+                            <li class="flex items-start"><span class="mr-2 text-purple-400">🧮</span> Motivar a practicar con QuickTables o plataformas externas de cálculo mental (si el alumno lo necesita).</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Teaching Section -->
+            <section id="teaching" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8 text-white header-glow">🎲 Enseñanza Activa y Dinámicas</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
+                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg></div>
+                        <p>🚀 Ofrecer retos extra, temas curiosos o avanzados para alumnos adelantados.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
+                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
+                        <p>🌍 Conexión con la vida real y problemas cotidianos.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
+                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.328 11.672a4.5 4.5 0 016.364 0L12 12.879l1.308-1.207a4.5 4.5 0 016.364 6.364L12 21.707l-7.672-7.672a4.5 4.5 0 010-6.364z" /></svg></div>
+                        <p>🏗️ No limitarse únicamente a las aplicaciones, sino también abarcar temas avanzados en caso de ser pertinente.</p>
+                    </div>
+                     <div class="card rounded-2xl p-6 flex items-center space-x-4">
+                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-2.474-1.7-1.651 2.729-.4-.57-2.474 2.148 1.849 2.728.4-1.7 1.65.57 2.474-2.51-2.225z" /></svg></div>
+                        <p>🎨 Recursos visuales (colores, esquemas, gráficas).</p>
+                    </div>
+                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
+                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z" /></svg></div>
+                        <p>💻 Compartir pantalla y audio en Anton (a criterio del profesor).</p>
+                    </div>
+            
+                </div>
+            </section>
+
+            <!-- Trust Environment Section -->
+            <section id="trust">
+                 <h2 class="text-3xl font-bold text-center mb-8 text-white header-glow">Creando una Atmósfera de Confianza</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card rounded-2xl p-6">
+                        <h3 class="font-bold text-lg mb-2 text-purple-300">👩‍💻 Presencia y Conexión</h3>
+                        <p>📷 Mantener la cámara encendida. <br> 🎤 Usar voz amable, clara y con variación en la entonación.</p>
+                    </div>
+                     <div class="card rounded-2xl p-6">
+                        <h3 class="font-bold text-lg mb-2 text-purple-300">🤝 Comunicación y Paciencia</h3>
+                        <p>🧩 Normalizar los errores como parte natural del aprendizaje. <br> 🌱 Ofrecer retroalimentación constructiva. <br> 💬 Preguntar cómo se sienten y qué opinan.</p>
+                    </div>
+                    <div class="card rounded-2xl p-6">
+                        <h3 class="font-bold text-lg mb-2 text-purple-300">👨🏻‍🏫Herramientas para el Docente</h3>
+                        <p>⏱️ Utilizar alarmas o temporizadores para organizar los tiempos de clase.<br> 🖊️ Uso de tableta digital para trazos más claros.</p>
+                    </div>
+                
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="text-center mt-16 pb-8">
+        <p class="text-purple-400">
+        Autores<br>
+        Profesor Omar Saavedra Sapien<br>
+        Profesora Grethel Guzmán Pineda<br>
+        Profesor Roberto Ramírez Marín
+        </p>
+    </footer>
+
+    </div>
+</body>
+</html>
