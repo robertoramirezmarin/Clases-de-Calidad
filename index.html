@@ -3,214 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clases de Calidad</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #1a103c;
-            background-image:
-                radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.4) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.4) 0%, transparent 40%);
-            overflow-x: hidden;
-            color: #e0e0e0;
-        }
-
-        .card {
-            background-color: rgba(40, 27, 85, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(124, 58, 237, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 30px rgba(124, 58, 237, 0.2);
-        }
-
-        .icon {
-            width: 48px;
-            height: 48px;
-            stroke-width: 1.5;
-        }
-        
-        .header-glow {
-            text-shadow: 0 0 10px rgba(168, 85, 247, 0.8), 0 0 20px rgba(124, 58, 237, 0.6);
-        }
-    </style>
+    <title>Guía para Clases de Calidad - Sapienty</title>
+    <link rel="icon" href="Logo1.webp" type="image/webp">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen p-4 sm:p-6 md:p-8">
-    <div class="container mx-auto max-w-6xl">
+<body>
 
-        <!-- Header Section -->
-        <header class="text-center my-12">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white header-glow">
-                🚀 Guía para Clases de Calidad 🚀
-            </h1>
-            <p class="text-lg md:text-xl mt-4 text-purple-300 max-w-3xl mx-auto">
-                Sapienty Math Academy
-            </p>
-        </header>
+    <!-- Contenedor para la imagen en la esquina superior izquierda -->
+    <div class="top-left-logo">
+        <img src="cropped-Logo.webp" alt="Logo Principal">
+    </div>
 
-        <main>
-            <!-- Mission Structure Section -->
-            <section id="structure" class="mb-16">
-                <h2 class="text-3xl font-bold text-center mb-8 text-white header-glow">📋 Estructura de la Clase</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Card 1: Incio -->
-                    <div class="card rounded-2xl p-6 text-center">
-                        <div class="flex justify-center mb-4">
-                            <svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">✨ Inicio</h3>
-                        <ul class="text-left space-y-2 text-purple-200">
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">👋 </span> Saludo corto y cordial (interesarse por cómo le fue).</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">🤝 </span> Ofrecer apoyo para resolver dudas de la escuela (preguntar qué tema está viendo en la escuela).</li>
-                        </ul>
-                    </div>
-                    <!-- Card 2: Exploración -->
-                    <div class="card rounded-2xl p-6 text-center">
-                        <div class="flex justify-center mb-4">
-                            <svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L3 10.25l6.75-6.75M19.5 17l-6.75-6.75L19.5 3.5" />
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">📖 Desarrollo</h3>
-                        <ul class="text-left space-y-2 text-purple-200">
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">⏰</span> Puntualidad</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">🧑🏻‍🎓</span> Explicación Dirigida: El profesor guía al inicio, pero el alumno es protagonista</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">✍️</span> Resolución Interactiva: El alumno resuelve en pantalla (si es posible; de lo contrario, el profesor lo apoya)</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">💬</span> Fomento del Pensamiento Crítico: Hacer reflexionar y profundizar al alumno (ejemplo: ¿Por qué…? ¿Cómo…?)</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">📚</span> Material de Apoyo (evitar videos)</li>
-                        </ul>
-                    </div>
-                    <!-- Card 3: Aterrizaje -->
-                    <div class="card rounded-2xl p-6 text-center">
-                        <div class="flex justify-center mb-4">
-                             <svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125V6.375c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v.001c0 .621.504 1.125 1.125 1.125z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-white">✅ Cierre</h3>
-                        <ul class="text-left space-y-2 text-purple-200">
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">🔄</span>Síntesis rápida del tema (qué aprendimos hoy).</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">📋</span> Pedir al alumno que explique con sus propias palabras.</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">🧮</span> Motivar a practicar con QuickTables o plataformas externas de cálculo mental (si el alumno lo necesita).</li>
-                            <li class="flex items-start"><span class="mr-2 text-purple-400">📄</span> Compartir notas de la clase. </li>
+    <!-- Elementos decorativos del fondo -->
+    <div class="bg-pattern"></div>
+    <div class="shape shape-yellow"></div>
+    <div class="shape shape-cyan"></div>
 
-                        </ul>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Active Teaching Section -->
-            <section id="teaching" class="mb-16">
-                <h2 class="text-3xl font-bold text-center mb-8 text-white header-glow">🎲 Enseñanza Activa y Dinámicas</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
-                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg></div>
-                        <p>🚀 Ofrecer retos extra, temas curiosos o avanzados para alumnos adelantados.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
-                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
-                        <p>🌍 Conexión con la vida real y problemas cotidianos.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
-                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.328 11.672a4.5 4.5 0 016.364 0L12 12.879l1.308-1.207a4.5 4.5 0 016.364 6.364L12 21.707l-7.672-7.672a4.5 4.5 0 010-6.364z" /></svg></div>
-                        <p>🏗️ No limitarse únicamente a las aplicaciones, sino también abarcar temas avanzados en caso de ser pertinente.</p>
-                    </div>
-                     <div class="card rounded-2xl p-6 flex items-center space-x-4">
-                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-2.474-1.7-1.651 2.729-.4-.57-2.474 2.148 1.849 2.728.4-1.7 1.65.57 2.474-2.51-2.225z" /></svg></div>
-                        <p>🎨 Recursos visuales (colores, esquemas, gráficas).</p>
-                    </div>
-                    <div class="card rounded-2xl p-6 flex items-center space-x-4">
-                        <div class="flex-shrink-0"><svg class="icon text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z" /></svg></div>
-                        <p>💻 Compartir pantalla y audio en Anton (a criterio del profesor).</p>
-                    </div>
+    <div id="slider-container">
+        
+        <!-- Diapositiva 1: Portada -->
+        <div class="slide active">
+            <h1>🚀 GUÍA PARA CLASES DE CALIDAD 🚀</h1>
+            <p class="subtitle">SAPIENTY MATH ACADEMY</p>
+        </div>
+
+        <!-- Diapositiva 2: Estructura -->
+        <div class="slide">
+            <div class="title-container">
+                <h2>ESTRUCTURA DE LA CLASE</h2>
+            </div>
             
-                </div>
-            </section>
-
-            <!-- Trust Environment Section -->
-            <section id="trust">
-                 <h2 class="text-3xl font-bold text-center mb-8 text-white header-glow">🤝 Creando una Atmósfera de Confianza</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="card rounded-2xl p-6">
-                        <h3 class="font-bold text-lg mb-2 text-purple-300">👩‍💻 Presencia y Conexión</h3>
-                        <p>📷 Mantener la cámara encendida. <br> 🎤 Usar voz amable, clara y con variación en la entonación.</p>
-                    </div>
-                     <div class="card rounded-2xl p-6">
-                        <h3 class="font-bold text-lg mb-2 text-purple-300">🤝 Comunicación y Paciencia</h3>
-                        <p>🧩 Normalizar los errores como parte natural del aprendizaje. <br> ❌ Equivocarse al propósito con el objetivo de que él alumno identifique el error. <br> 🌱 Ofrecer retroalimentación constructiva. <br> 💬 Preguntar cómo se sienten y qué opinan.</p>
-                    </div>
-                    <div class="card rounded-2xl p-6">
-                        <h3 class="font-bold text-lg mb-2 text-purple-300">👨🏻‍🏫Herramientas para el Docente</h3>
-                        <p>⏱️ Utilizar alarmas o temporizadores para organizar los tiempos de clase.<br> 🖊️ Uso de tableta digital para trazos más claros.</p>
-                    </div>
+            <div class="grid-container">
                 
+                <div class="card-creative">
+                    <div class="watermark-number">1</div>
+                    <div class="card-header-creative">
+                        <div class="icon-circle">✨</div>
+                        <h3>Inicio</h3>
+                    </div>
+                    <ul>
+                        <li>👋 Saludo corto y cordial (interesarse por cómo le fue).</li>
+                        <li>🤝 Ofrecer apoyo para resolver dudas de la escuela.</li>
+                    </ul>
                 </div>
-            </section>
 
-             <!-- Primera Clase -->
-            <section id="trust-2">
-                <h2 class="text-3xl font-bold text-center mb-8 text-white header-glow"><br>👋 Sesión Inicial: Primera Clase con Nuevo Alumno</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card rounded-2xl p-6">
-                    <h3 class="font-bold text-lg mb-2 text-purple-300">📊 Indicadores de Desempeño</h3>
-                    <p> 🧠 Capacidad: Mide la habilidad o potencial del estudiante. 
-                    <br> 📚 Conocimientos: Evalúa el dominio y la comprensión que el alumno tiene sobre los temas. 
-                    <br> 🙋‍♀️ Actitud: Califica la disposición, participación y comportamiento del estudiante.
-                    <br> 🚀 Facilidad Clase: Facilidad con la que el alumno realiza las actividades y sigue el ritmo de la clase.
-                    <br> 🤝 Tutora: Evaluar el nivel de involucramiento de los tutores en el proceso educativo.</p>
+                <div class="card-creative">
+                    <div class="watermark-number">2</div>
+                    <div class="card-header-creative">
+                        <div class="icon-circle">📖</div>
+                        <h3>Desarrollo</h3>
+                    </div>
+                    <ul>
+                        <li>⏰ Puntualidad.</li>
+                        <li>🧑🏻‍🎓 Explicación Dirigida: El profesor guía, el alumno es protagonista.</li>
+                        <li>✍️ Resolución Interactiva en pantalla.</li>
+                        <li>💬 Fomento del Pensamiento Crítico (¿Por qué? ¿Cómo?).</li>
+                        <li>📚 Material de Apoyo (evitar videos).</li>
+                    </ul>
                 </div>
-                <div class="card rounded-2xl p-6">
-                    <h3 class="font-bold text-lg mb-2 text-purple-300"> ✍️ Comentarios del Representante de Ventas</h3>
-                    <p> 🤝 Permite conocer al alumno de manera previa.
-                    <br> 🔍 Brinda una perspectiva breve sobre lo que el estudiante domina o le falta trabajar. 
-                    <br> 🧭 Orientan al profesor para elegir la técnica de aprendizaje más adecuada.
-                    </p>
+
+                <div class="card-creative">
+                    <div class="watermark-number">3</div>
+                    <div class="card-header-creative">
+                        <div class="icon-circle">✅</div>
+                        <h3>Cierre</h3>
+                    </div>
+                    <ul>
+                        <li>🔄 Síntesis rápida del tema aprendido.</li>
+                        <li>📋 Pedir al alumno que explique con sus propias palabras.</li>
+                        <li>🧮 Motivar a practicar con QuickTables.</li>
+                        <li>📄 Compartir notas de la clase.</li>
+                    </ul>
                 </div>
-                <div class="card rounded-2xl p-6">
-                    <h3 class="font-bold text-lg mb-2 text-purple-300"> 👩‍🏫 Comentarios del Profesor: Apoyo entre Profesores 👨‍🏫</h3>
-                    <p> ✍️ Mantener comentarios actualizados.
-                    <br> 🔍 Brinda una perspectiva breve sobre lo que el estudiante domina o le falta trabajar. 
-                    <br> 🤝 Informa de lo más relevante (nombre con el que ingresa).
-                    </p>
+
+            </div>
+        </div>
+
+        <!-- Diapositiva 3: Enseñanza Activa -->
+        <div class="slide">
+            <div class="title-container">
+                <h2>ENSEÑANZA ACTIVA Y DINÁMICAS</h2>
+            </div>
+            
+            <div class="menu-container">
+                
+                <div class="menu-card">
+                    <div class="menu-header">
+                        <div class="menu-title-group">
+                            <span class="menu-icon">🚀</span>
+                            <div class="badge-title">Retos</div>
+                        </div>
+                        <span class="menu-chevron">⌃</span>
+                    </div>
+                    <div class="menu-content">
+                        <ul>
+                            <li>Ofrecer retos extra, temas curiosos o avanzados para alumnos adelantados.</li>
+                            <li>🌍 Conexión con la vida real y problemas cotidianos.</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="menu-card">
+                    <div class="menu-header">
+                        <div class="menu-title-group">
+                            <span class="menu-icon">🏗️</span>
+                            <div class="badge-title">Amplitud</div>
+                        </div>
+                        <span class="menu-chevron">⌃</span>
+                    </div>
+                    <div class="menu-content">
+                        <ul>
+                            <li>No limitarse únicamente a las aplicaciones, abarcar temas avanzados.</li>
+                            <li>🎨 Recursos visuales (colores, esquemas, gráficas).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <div class="menu-header">
+                        <div class="menu-title-group">
+                            <span class="menu-icon">💻</span>
+                            <div class="badge-title">Tecnología</div>
+                        </div>
+                        <span class="menu-chevron">⌃</span>
+                    </div>
+                    <div class="menu-content">
+                        <ul>
+                            <li>Compartir pantalla (a criterio del profesor).</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Diapositiva 4: Atmósfera -->
+        <!-- Diapositiva 4: Atmósfera (Estilo Texto Flotante) -->
+        <div class="slide">
+            <!-- Si deseas ocultar el título principal para que quede idéntico a la imagen, borra las siguientes 3 líneas -->
+            <div class="title-container">
+                <h2>ATMÓSFERA DE CONFIANZA</h2>
+            </div>
+            
+            <div class="floating-container">
+                <!-- Fila Superior -->
+                <div class="floating-row">
+                    <!-- Sección 1 -->
+                    <div class="floating-section">
+                        <div class="badge-title">👩‍💻 CONEXIÓN</div>
+                        <ul class="emoji-list">
+                            <li><span>📷</span> Mantener la cámara encendida.</li>
+                            <li><span>🎤</span> Usar voz amable, clara y con variación en la entonación.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sección 2 -->
+                    <div class="floating-section">
+                        <div class="badge-title">🤝 COMUNICACIÓN Y PACIENCIA</div>
+                        <ul class="emoji-list">
+                            <li><span>🧩</span> Normalizar los errores como parte del aprendizaje.</li>
+                            <li><span>❌</span> Equivocarse a propósito para que el alumno identifique el error.</li>
+                            <li><span>🌱</span> Ofrecer retroalimentación constructiva.</li>
+                            <li><span>💬</span> Preguntar cómo se sienten y qué opinan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Fila Inferior (Centrada) -->
+                <div class="floating-row bottom-row">
+                    <!-- Sección 3 -->
+                    <div class="floating-section">
+                        <div class="badge-title">👨🏻‍🏫 HERRAMIENTAS</div>
+                        <ul class="emoji-list">
+                            <li><span>⏱️</span> Utilizar alarmas o temporizadores.</li>
+                            <li><span>🖊️</span> Uso de tableta digital para trazos más claros.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-    </section>
+        </div>
 
-        </main>
-        
-        <footer class="text-center mt-16 pb-8">
-        <p class="text-purple-400">
-        Autores<br>
-        Profesor Omar Saavedra Sapien<br>
-        Profesora Grethel Guzmán Pineda<br>
-        Profesor Roberto Ramírez Marín<br>
-        <br>
-        Colaboradores<br>
-        Profesores Sapienty
-        </p>
-    </footer>
+        <!-- Diapositiva 5: Primera Clase & Créditos -->
+        <div class="slide">
+            <div class="title-container">
+                <h2>SESIÓN INICIAL: NUEVO ALUMNO</h2>
+            </div>
+            
+            <div class="final-slide-container">
+                <div class="final-columns">
+                    <!-- Columna 1: Indicadores -->
+                    <div class="final-column">
+                        <div class="badge-title badge-large">📊 INDICADORES</div>
+                        <ul class="emoji-list final-list grid-list">
+                            <li><span>🧠</span> <strong>Capacidad:</strong> <span class="desc">Mide la habilidad o potencial del estudiante.</span></li>
+                            <li><span>📚</span> <strong>Conocimientos:</strong> <span class="desc">Evalúa el dominio y la comprensión que el alumno tiene sobre los temas.</span></li>
+                            <li><span>🙋‍♀️</span> <strong>Actitud:</strong> <span class="desc">Califica la disposición, participación y comportamiento del estudiante.</span></li>
+                            <li><span>🚀</span> <strong>Facilidad Clase:</strong> <span class="desc">Facilidad con la que el alumno realiza las actividades y sigue el ritmo de la clase.</span></li>
+                            <li><span>🤝</span> <strong>Tutora:</strong> <span class="desc">Evaluar el nivel de involucramiento de los tutores en el proceso educativo.</span></li>
+                        </ul>
+                    </div>
 
+                    <!-- Columna 2: Ventas -->
+                    <div class="final-column">
+                        <div class="badge-title badge-large">✍️ COMENTARIOS DE LOS REPRESENTANTES DE VENTAS</div>
+                        <ul class="emoji-list final-list">
+                            <li><span>🤝</span> Permite conocer al alumno de manera previa.</li>
+                            <li><span>🔍</span> Brinda una perspectiva breve sobre lo que el estudiante domina o le falta trabajar.</li>
+                            <li><span>🧭</span> Orientan al profesor para elegir la técnica de aprendizaje más adecuada.</li>
+                            <li><span>👥</span> Permite identificar el objetivo por al cual toman las clases.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Columna 3: Profesores -->
+                    <div class="final-column">
+                        <div class="badge-title badge-large">👨‍🏫 PROFESORES</div>
+                        <ul class="emoji-list final-list">
+                            <li><span>✍️</span> Mantener comentarios actualizados.</li>
+                            <li><span>🔍</span> Brinda una perspectiva breve sobre lo que el estudiante domina o le falta trabajar.</li>
+                            <li><span>🤝</span> Informa de lo más relevante (nombre con el que ingresa).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                
+                <!-- Créditos Finales Destacados -->
+                <div class="credits-box">
+                    <p><strong>Autores:</strong> Prof. Omar Saavedra Sapien, Prof. Grethel Guzmán Pineda, Prof. Roberto Ramírez Marín</p>
+                    <p><strong>Colaboradores:</strong> Profesores Sapienty</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agradecimientos -->
+        <div class="slide">
+            <div class="title-container">
+                <h1>¡GRACIAS!</h1>
+                <p class="subtitle">"Todos aprendemos de todos"</p>
+            </div>
+        </div>
+
+    <!-- Controles de navegación -->
+    <div class="controls">
+    <button id="prevBtn" disabled>◀ Anterior</button>
+    <div class="progress-dots" id="dots-container"></div>
+    <button id="nextBtn">Siguiente ▶</button>
     </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
