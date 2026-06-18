@@ -188,13 +188,9 @@ h2::after {
     width: 100%;
 }
 
-
-
 .card:hover {
     transform: translateY(-5px);
 }
-
-
 
 /* --- TARJETAS CREATIVAS (PLAYFUL 3D) --- */
 .card-creative {
@@ -306,9 +302,6 @@ h2::after {
     font-weight: 800;
     color: #4b1a65; /* Morado oscuro Sapienty */
 }
-
-
-
 
 .card-chevron {
     color: #9ca3af;
@@ -503,7 +496,6 @@ button:disabled {
 /* ---------------------------------------------- */
 
 /* --- ESTILO FLOTANTE (DIAPOSITIVA 4) --- */
-/* --- ESTILO FLOTANTE (DIAPOSITIVA 4) --- */
 
 /* Reducimos el margen del título exclusivamente en esta diapositiva */
 .slide:nth-child(4) h2 {
@@ -641,7 +633,6 @@ button:disabled {
 }
 
 /* --- TEXTO COMPACTO Y ORDENADO --- */
-/* --- TEXTO COMPACTO Y ORDENADO --- */
 .final-list {
     width: 100%;
     list-style: none;
@@ -652,7 +643,7 @@ button:disabled {
 .final-list li {
     font-family: 'Space Grotesk', sans-serif !important;
     color: #333333; 
-    font-size: 1.1 rem !important; /* Tamaño base forzado */
+    font-size: 1.1rem !important; /* Tamaño base forzado */
     font-weight: 500;
     margin-bottom: 12px; 
     line-height: 1.4; 
@@ -674,7 +665,7 @@ button:disabled {
 .final-list li strong {
     color: #4b1a65; 
     font-weight: 800;
-    font-size: 1.1 rem !important; /* Forzamos el mismo tamaño */
+    font-size: 1.1rem !important; /* Forzamos el mismo tamaño */
     margin-right: 5px; 
 }
 
@@ -725,6 +716,15 @@ button:disabled {
         padding: 90px 5% 80px 5%; /* Espacio para que el logo y los botones no tapen el texto */
         justify-content: flex-start; /* Alinea el contenido arriba en lugar de al centro */
         overflow-y: auto; /* Permite deslizar hacia abajo si falta espacio */
+    }
+    
+    /* 2.1 Garantizar que el final del contenido de la diapositiva no se oculte tras los botones */
+    .slide::after {
+        content: "";
+        display: block;
+        height: 60px; /* Crea un margen "fantasma" al final del scroll */
+        width: 100%;
+        flex-shrink: 0;
     }
 
     /* 3. Reducir el logo superior izquierdo */
@@ -793,14 +793,18 @@ button:disabled {
         max-width: 100%;
     }
 
-    /* 8. Controles inferiores más pequeños */
+    /* 8. Controles inferiores optimizados para no romperse */
     .controls {
-        bottom: 10px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
         padding: 0 10px;
+        bottom: 10px;
     }
     button {
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        white-space: nowrap; /* Evita que el texto del botón se rompa en dos líneas */
     }
     .progress-dots {
         margin: 0 10px;
@@ -809,5 +813,20 @@ button:disabled {
     .dot {
         width: 10px;
         height: 10px;
+    }
+    
+    /* 9. Reducir las figuras decorativas para que no distraigan ni sobrecarguen la pantalla */
+    .shape-yellow {
+        width: 200px;
+        height: 200px;
+        top: -50px;
+        right: -50px;
+    }
+
+    .shape-cyan {
+        width: 150px;
+        height: 150px;
+        bottom: -50px;
+        left: -50px;
     }
 }
