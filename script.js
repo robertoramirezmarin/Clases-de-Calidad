@@ -57,3 +57,35 @@ document.addEventListener('keydown', (e) => {
         cambiarSlide(-1);
     }
 });
+
+// --- SOPORTE PARA GESTOS TÁCTILES (SWIPE) ---
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+document.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+    touchstartY = e.changedTouches[0].screenY;
+});
+
+document.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    touchendY = e.changedTouches[0].screenY;
+    
+    // Calcular la diferencia de movimiento
+    const diffX = Math.abs(touchendX - touchstartX);
+    const diffY = Math.abs(touchendY - touchstartY);
+    
+    // Verificar si el movimiento fue mayormente horizontal (para no interferir con el scroll vertical)
+    if (diffX > diffY && diffX > 40) {
+        if (touchendX < touchstartX && slideActual < slides.length - 1) {
+            // Deslizó hacia la izquierda -> Siguiente
+            cambiarSlide(1);
+        }
+        if (touchendX > touchstartX && slideActual > 0) {
+            // Deslizó hacia la derecha -> Anterior
+            cambiarSlide(-1);
+        }
+    }
+});
